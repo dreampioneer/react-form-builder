@@ -1,5 +1,5 @@
 {
-  "name": "react-form-builder2",
+  "name": "react-form-builder2-la",
   "version": "0.18.0",
   "description": "A complete form builder for react.",
   "main": "lib/index.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kiho/react-form-builder.git"
+    "url": "git+https://github.com/dreampioneer/react-form-builder.git"
   },
   "files": [
     "lib",
@@ -29,9 +29,8 @@
   "author": "Kiho Chang",
   "contributors": [
     {
-      "name": "Zach Robichaud",
-      "email": "zach2825@gmail.com",
-      "url": "https://turtlebytes.com"
+      "name": "Dream Pioneer",
+      "email": "dreampioneer9999@gmail.com"
     }
   ],
   "dependencies": {
@@ -76,6 +75,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^3.6.0",
     "ejs": "^2.7.4",
     "eslint": "^6.8.0",
@@ -104,7 +104,7 @@
     "build:dist": "npm run build && npm run copy:dist",
     "clean": "rimraf dist",
     "copy:dist": "copyfiles -f \"./dist/*\" \"./public/dist\"",
-    "prepublishOnly": "npm run clean && NODE_OPTIONS=--openssl-legacy-provider npm run build:lib && NODE_OPTIONS=--openssl-legacy-provider npm run build",
+    "prepublishOnly": "npm run clean && set NODE_OPTIONS=--openssl-legacy-provider npm run build:lib && set NODE_OPTIONS=--openssl-legacy-provider npm run build",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --hot --mode development",
     "serve:api": "node server/index.js",
